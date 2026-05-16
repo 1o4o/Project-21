@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://duop6hh7sfui"]
+
+[ext_resource type="PackedScene" uid="uid://dojvn58hsyuie" path="res://assets/Book Stack.glb" id="1_36trf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v321d"]
+albedo_color = Color(0.07739862, 0.17422655, 0.048853107, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f1tnb"]
+albedo_color = Color(0.1173548, 0.1173548, 0.1173548, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_88gup"]
+albedo_color = Color(0.2482138, 0.0926233, 0.018614592, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bisa2"]
+albedo_color = Color(0.0018410678, 0.0018410682, 0.0018410678, 1)
+metallic = 0.8
+metallic_specular = 0.76
+
+[node name="room" type="CSGCombiner3D" unique_id=1567382256]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1589408113]
+transform = Transform3D(1.875, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.79999995, 1.7405293)
+transparency = 0.67
+cast_shadow = 0
+calculate_tangents = false
+size = Vector3(1, 1, 1.0810585)
+material = SubResource("StandardMaterial3D_v321d")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="." unique_id=1401993653]
+transform = Transform3D(13.582649, 0, 0, 0, 1, 0, 0, 0, 6.9925785, 0, -1.2995, 1.6969559)
+transparency = 0.67
+cast_shadow = 0
+calculate_tangents = false
+size = Vector3(1, 0.001, 0.99391174)
+material = SubResource("StandardMaterial3D_f1tnb")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=445147742]
+transform = Transform3D(1.875, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.79999995, 1.19)
+transparency = 0.67
+cast_shadow = 0
+calculate_tangents = false
+size = Vector3(1, 1, 0.02)
+material = SubResource("StandardMaterial3D_88gup")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="." unique_id=1026968443]
+transform = Transform3D(1.875, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.79999995, 2.287764)
+transparency = 0.67
+cast_shadow = 0
+calculate_tangents = false
+size = Vector3(1, 1, 0.02)
+material = SubResource("StandardMaterial3D_88gup")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=1279541810]
+transform = Transform3D(-8.195885e-08, 0, -1, 0, 1, 0, 1.875, 0, -4.371139e-08, 0.93999994, -0.79999995, 1.7382597)
+transparency = 0.67
+cast_shadow = 0
+calculate_tangents = false
+size = Vector3(0.5821438, 1, 0.02)
+material = SubResource("StandardMaterial3D_88gup")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="." unique_id=607711996]
+transform = Transform3D(-8.195885e-08, 0, -1, 0, 1, 0, 1.875, 0, -4.371139e-08, -0.9400001, -0.79999995, 1.7369802)
+transparency = 0.67
+cast_shadow = 0
+calculate_tangents = false
+size = Vector3(0.5942383, 1, 0.02)
+material = SubResource("StandardMaterial3D_88gup")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=1060878365]
+transform = Transform3D(48.625237, 0, 0, 0, 1.4585747, 0, 0, 0, 0.53999984, 0, 1.2702, -4.8)
+size = Vector3(1, 10.8, 1)
+material = SubResource("StandardMaterial3D_bisa2")
+
+[node name="Book Stack" parent="." unique_id=2070458376 instance=ExtResource("1_36trf")]
+transform = Transform3D(-0.23254208, 0, 0.2976337, 0, 0.5424379, 0, -0.2377047, 0, -0.29116952, -0.78972185, -0.14735484, 1.3733954)

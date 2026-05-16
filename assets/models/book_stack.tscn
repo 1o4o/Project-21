@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cfumxx3yobakb"]
+
+[ext_resource type="PackedScene" uid="uid://dojvn58hsyuie" path="res://assets/Book Stack.glb" id="1_ch3e2"]
+
+[node name="Book Stack" unique_id=2070458376 instance=ExtResource("1_ch3e2")]
+
+[node name="Node" parent="." index="0" unique_id=1551512021]
+gi_lightmap_texel_scale = 0.01

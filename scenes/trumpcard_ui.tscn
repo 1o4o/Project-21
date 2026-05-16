@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cassga0proi3b"]
+
+[ext_resource type="Texture2D" uid="uid://crdx5abvpwcdk" path="res://assets/cardAtlas/trumpCards.png" id="1_kroqy"]
+[ext_resource type="Script" uid="uid://vbyrnilgb1ug" path="res://scripts/trumpcardUI.gd" id="2_umoqb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s887n"]
+resource_local_to_scene = true
+atlas = ExtResource("1_kroqy")
+region = Rect2(0, 1024, 256, 256)
+
+[node name="trumpcardUI" type="TextureButton" unique_id=1728502904]
+texture_normal = SubResource("AtlasTexture_s887n")
+stretch_mode = 5
+script = ExtResource("2_umoqb")
+
+[node name="count" type="Label" parent="." unique_id=1618507625]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -64.0
+offset_right = 123.0
+offset_bottom = 46.0
+grow_vertical = 0
+theme_override_constants/outline_size = 36
+theme_override_font_sizes/font_size = 47
+text = "2x"
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

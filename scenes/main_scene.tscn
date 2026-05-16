@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://c7qy1xcx8jd3l"]
+
+[ext_resource type="Script" uid="uid://b7ppb8elyi4kh" path="res://scripts/camera_3d.gd" id="1_0f027"]
+[ext_resource type="Script" uid="uid://d5ccow6rgmq3" path="res://scripts/main_scene.gd" id="1_gubc5"]
+[ext_resource type="PackedScene" uid="uid://duop6hh7sfui" path="res://scenes/room.tscn" id="2_2c62f"]
+[ext_resource type="Shader" uid="uid://baqkddlmenjy7" path="res://assets/shaders/post_process.gdshader" id="4_c1pb6"]
+[ext_resource type="PackedScene" uid="uid://bjuf471bwpv0g" path="res://scenes/keybind.tscn" id="4_d5x1h"]
+[ext_resource type="PackedScene" uid="uid://cfs23s1i6q6c3" path="res://scenes/inventory.tscn" id="5_gubc5"]
+[ext_resource type="PackedScene" uid="uid://cfbs5vji57vg8" path="res://scenes/main_ui.tscn" id="6_c16ls"]
+[ext_resource type="PackedScene" uid="uid://cfsovjd5fd0fy" path="res://scenes/trumpcard.tscn" id="6_rt2n2"]
+[ext_resource type="AudioStream" uid="uid://ce67vtswpnwgk" path="res://assets/sounds/ambience1.wav" id="8_18nlu"]
+
+[sub_resource type="Environment" id="Environment_c1pb6"]
+glow_enabled = true
+glow_intensity = 1.0
+glow_bloom = 0.3
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6wevv"]
+shader = ExtResource("4_c1pb6")
+shader_parameter/vignette_intensity = 0.3950000187625
+shader_parameter/vignette_opacity = 0.2000000095
+shader_parameter/grain_amount = 0.0450000021375
+
+[node name="mainScene" type="Node3D" unique_id=1998838602]
+script = ExtResource("1_gubc5")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1215842459]
+environment = SubResource("Environment_c1pb6")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=775718403]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.101481706, 2.3112233)
+script = ExtResource("1_0f027")
+tilt_amount = 15.0
+
+[node name="room" parent="." unique_id=1567382256 instance=ExtResource("2_2c62f")]
+
+[node name="processingCanvas" type="CanvasLayer" parent="." unique_id=1769883775]
+layer = 999
+
+[node name="postProcessing" type="ColorRect" parent="processingCanvas" unique_id=2004432719]
+material = SubResource("ShaderMaterial_6wevv")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="canvasUI" type="CanvasLayer" parent="." unique_id=1696646007]
+
+[node name="keybind" parent="canvasUI" unique_id=812903507 instance=ExtResource("4_d5x1h")]
+
+[node name="mainUI" parent="canvasUI" unique_id=1495239695 instance=ExtResource("6_c16ls")]
+
+[node name="inventory" parent="canvasUI" unique_id=226953051 instance=ExtResource("5_gubc5")]
+
+[node name="lightTable" type="OmniLight3D" parent="." unique_id=1326880005]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.38480693, 1.7347386)
+light_energy = 3.0
+
+[node name="playerLabel" type="Label3D" parent="." unique_id=1476969828]
+transform = Transform3D(0.6, 0, 0, 0, 0.44376546, 0.2467466, 0, -0.25620815, 0.42737758, -0.43122938, -0.223, 2)
+pixel_size = 0.004
+modulate = Color(0, 1, 0, 1)
+text = "0/21"
+font_size = 31
+
+[node name="enemyLabel" type="Label3D" parent="." unique_id=198103048]
+transform = Transform3D(0.6, 0, 0, 0, 0.44376546, 0.2467466, 0, -0.25620815, 0.42737758, -0.43122938, -0.223, 1.6210948)
+pixel_size = 0.004
+text = "?+0/21"
+font_size = 31
+
+[node name="trumpcard" parent="." unique_id=1671966724 instance=ExtResource("6_rt2n2")]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, -0.255, -0.29, 1.89)
+
+[node name="trumpcard2" parent="." unique_id=49855096 instance=ExtResource("6_rt2n2")]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, -0.255, -0.29, 1.77)
+
+[node name="trumpcard3" parent="." unique_id=1897183120 instance=ExtResource("6_rt2n2")]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, -0.14130117, -0.29, 1.89)
+
+[node name="trumpcard4" parent="." unique_id=1334264901 instance=ExtResource("6_rt2n2")]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, -0.14130117, -0.29, 1.77)
+
+[node name="ambience" type="AudioStreamPlayer" parent="." unique_id=7713932]
+stream = ExtResource("8_18nlu")
+autoplay = true

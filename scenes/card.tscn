@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://b2j4s552n8lrc"]
+
+[ext_resource type="Script" uid="uid://dampn5jns1f5y" path="res://scripts/card.gd" id="1_kikvd"]
+[ext_resource type="Texture2D" uid="uid://b2ky8q5jwuc2l" path="res://assets/cardAtlas/defaultSkin.png" id="2_6u4wf"]
+[ext_resource type="AudioStream" uid="uid://b4o354uymjcqc" path="res://assets/sounds/flip_card.wav" id="3_ktuci"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d81rb"]
+transparency = 1
+cull_mode = 2
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_d81rb"]
+custom_aabb = AABB(0, 0, 0, 0, -0.02, 0)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ktuci"]
+load_path = "res://.godot/imported/defaultSkin.png-5e2a8715b0bb2c1043b804f754189cce.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kg30u"]
+atlas = SubResource("CompressedTexture2D_ktuci")
+region = Rect2(0, 0, 256, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d81rb"]
+resource_local_to_scene = true
+atlas = ExtResource("2_6u4wf")
+region = Rect2(256, 0, 256, 320)
+
+[node name="card" type="MeshInstance3D" unique_id=212850530]
+transform = Transform3D(0.064, 0, 0, 0, 0.16, 0, 0, 0, 0.08, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_d81rb")
+gi_mode = 2
+mesh = SubResource("PlaneMesh_d81rb")
+script = ExtResource("1_kikvd")
+
+[node name="backside" type="Sprite3D" parent="." unique_id=1457721893]
+transform = Transform3D(0.8, 0, 0, 0, 1, 0, 0, 0, 0.65, 0, 0, 0)
+gi_mode = 2
+axis = 1
+texture = SubResource("AtlasTexture_kg30u")
+
+[node name="frontside" type="Sprite3D" parent="." unique_id=301093967]
+transform = Transform3D(-0.8, 8.742278e-08, 0, -6.9938224e-08, -1, 0, 0, 0, 0.65000004, 0, -0.01, 0)
+gi_mode = 2
+axis = 1
+texture = SubResource("AtlasTexture_d81rb")
+
+[node name="hiddenText" type="Label3D" parent="." unique_id=640396877]
+transform = Transform3D(1.8312917, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49436203, -0.72876805)
+visible = false
+sorting_offset = 2.0
+billboard = 1
+double_sided = false
+no_depth_test = true
+render_priority = 5
+text = "11"
+font_size = 108
+outline_size = 46
+
+[node name="flip" type="AudioStreamPlayer" parent="." unique_id=502197475]
+stream = ExtResource("3_ktuci")
+autoplay = true

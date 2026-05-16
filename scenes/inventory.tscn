@@ -1,0 +1,394 @@
+[gd_scene format=3 uid="uid://cfs23s1i6q6c3"]
+
+[ext_resource type="Script" uid="uid://c2a7bn6yfdfc3" path="res://scripts/button.gd" id="1_qw0r6"]
+[ext_resource type="Script" uid="uid://0tkkgmmpvxr3" path="res://scripts/inventory.gd" id="1_ty45s"]
+[ext_resource type="FontFile" uid="uid://6gyf420bkkab" path="res://assets/fonts/FingerPaint-Regular.ttf" id="2_hj2ta"]
+[ext_resource type="Script" uid="uid://8ubb4ye5gf2y" path="res://scripts/topButton.gd" id="3_uae8j"]
+[ext_resource type="Texture2D" uid="uid://c4sf1iv5qwnaq" path="res://assets/sprites/info.png" id="5_uae8j"]
+[ext_resource type="Script" uid="uid://dnvah1i7r4k3d" path="res://scripts/hover_info.gd" id="5_yyk2a"]
+[ext_resource type="Script" uid="uid://bgqglerkcylxx" path="res://addons/SmoothScroll/smooth_scroll_container.gd" id="6_g71ie"]
+[ext_resource type="Script" uid="uid://b7h0k2h2qwlqv" path="res://addons/SmoothScroll/scroll_damper/expo_scroll_damper.gd" id="7_sr8g6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gg8by"]
+bg_color = Color(0, 0, 0, 0.827451)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_53g1v"]
+bg_color = Color(0, 0, 0, 0.31764707)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uae8j"]
+bg_color = Color(0.1847857, 0.1847857, 0.18478557, 0.31764707)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yyk2a"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qw0r6"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.12225223, 0.12225223, 0.12225223, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Resource" id="Resource_p7iul"]
+script = ExtResource("7_sr8g6")
+
+[sub_resource type="Resource" id="Resource_td2ew"]
+script = ExtResource("7_sr8g6")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s887n"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="inventory" type="Control" unique_id=226953051]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ty45s")
+
+[node name="Panel" type="Panel" parent="." unique_id=1019371456]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gg8by")
+
+[node name="topButtons" type="HBoxContainer" parent="." unique_id=2033531637]
+z_index = 51
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -304.0
+offset_top = -74.0
+offset_right = 304.0
+offset_bottom = -14.0
+grow_horizontal = 2
+script = ExtResource("3_uae8j")
+
+[node name="trumpCard" type="Button" parent="topButtons" unique_id=464085255]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_hj2ta")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxFlat_53g1v")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_53g1v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_uae8j")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_yyk2a")
+text = "TRUMP CARD"
+
+[node name="abilities" type="Button" parent="topButtons" unique_id=658666939]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_hj2ta")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxFlat_53g1v")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_53g1v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_uae8j")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_yyk2a")
+text = "ABILITIES"
+
+[node name="overview" type="Button" parent="topButtons" unique_id=40972399]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_hj2ta")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxFlat_53g1v")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_53g1v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_uae8j")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_yyk2a")
+text = "OVERVIEW"
+
+[node name="trumpcard" type="Control" parent="." unique_id=1408666548]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="trumpcard" unique_id=2008252345]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 787.0
+offset_top = 70.0
+offset_right = 1187.0
+offset_bottom = 620.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qw0r6")
+
+[node name="name" type="Label" parent="trumpcard/Panel" unique_id=1627969832]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -117.0
+offset_top = -239.0
+offset_right = 117.0
+offset_bottom = -194.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_hj2ta")
+theme_override_font_sizes/font_size = 30
+text = "Borrowed Time"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="description" type="RichTextLabel" parent="trumpcard/Panel/name" unique_id=15992470]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -187.5
+offset_top = 39.5
+offset_right = 187.5
+offset_bottom = 108.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Set this round's bet to 0. Next round's bet is increased by 2."
+fit_content = true
+autowrap_mode = 2
+horizontal_alignment = 1
+
+[node name="flavorText" type="RichTextLabel" parent="trumpcard/Panel/name" unique_id=699573178]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -187.0
+offset_top = 45.0
+offset_right = 188.0
+offset_bottom = 70.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(0.7427827, 0.7427827, 0.7427826, 1)
+theme_override_font_sizes/italics_font_size = 10
+bbcode_enabled = true
+text = "[i]To what end will the last gleam of hope lead?"
+fit_content = true
+autowrap_mode = 2
+horizontal_alignment = 1
+
+[node name="useButton" type="Button" parent="trumpcard/Panel/name" unique_id=1982345626]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.0
+offset_top = 179.0
+offset_right = 75.0
+offset_bottom = 229.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "USE"
+script = ExtResource("1_qw0r6")
+
+[node name="Label" type="Label" parent="trumpcard/Panel/name" unique_id=389067235]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -117.5
+offset_top = 183.0
+offset_right = 117.5
+offset_bottom = 206.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "Can only use during your turn."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="count" type="Label" parent="trumpcard/Panel/name" unique_id=834198649]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -36.5
+offset_top = 107.0
+offset_right = 36.5
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Owned: 1"
+horizontal_alignment = 1
+
+[node name="infoHover" type="TextureRect" parent="trumpcard/Panel/name" unique_id=2145275726]
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 8.0
+offset_top = -12.5
+offset_right = 38.0
+offset_bottom = 17.5
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("5_uae8j")
+expand_mode = 1
+
+[node name="BoxContainer" type="ScrollContainer" parent="trumpcard/Panel" unique_id=652053663]
+custom_minimum_size = Vector2(0, 900)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -420.01
+offset_top = 20.999998
+offset_right = 420.01
+offset_bottom = 921.0
+grow_horizontal = 2
+scale = Vector2(0.323, 0.323)
+pivot_offset_ratio = Vector2(0.5, 0)
+script = ExtResource("6_g71ie")
+wheel_scroll_damper = SubResource("Resource_p7iul")
+dragging_scroll_damper = SubResource("Resource_td2ew")
+metadata/_custom_type_script = "uid://bgqglerkcylxx"
+
+[node name="MarginContainer" type="MarginContainer" parent="trumpcard/Panel/BoxContainer" unique_id=18127903]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="GridContainer" type="GridContainer" parent="trumpcard/Panel/BoxContainer/MarginContainer" unique_id=1454425395]
+layout_mode = 2
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 16
+columns = 3
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="noTrumpCard" type="Label" parent="trumpcard/Panel" unique_id=964127353]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -172.5
+offset_top = -35.5
+offset_right = 172.5
+offset_bottom = 35.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.4745098)
+theme_override_font_sizes/font_size = 24
+text = "You don't have any trump
+card in your hand."
+horizontal_alignment = 1
+
+[node name="infoText" type="Label" parent="trumpcard/Panel" unique_id=1030312322]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -172.5
+offset_top = 107.0
+offset_right = 172.5
+offset_bottom = 178.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.4745098)
+theme_override_font_sizes/font_size = 24
+text = "Select a trump card to view
+its information."
+horizontal_alignment = 1
+
+[node name="abilities" type="Control" parent="." unique_id=353025099]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="overview" type="Control" parent="." unique_id=369799711]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="hoverInfo" type="Panel" parent="." unique_id=180748658]
+visible = false
+z_index = 52
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -130.0
+offset_right = 200.0
+offset_bottom = -70.0
+grow_vertical = 0
+pivot_offset_ratio = Vector2(0, 1)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_s887n")
+script = ExtResource("5_yyk2a")
+
+[node name="text" type="Label" parent="hoverInfo" unique_id=257726753]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -92.49999
+offset_top = -27.0
+offset_right = 92.49999
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 11
+text = "text
+text
+text"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="topButtons/trumpCard" to="." method="_on_trump_card_pressed"]
+[connection signal="pressed" from="topButtons/abilities" to="." method="_on_abilities_pressed"]
+[connection signal="pressed" from="topButtons/overview" to="." method="_on_overview_pressed"]

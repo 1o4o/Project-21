@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://bjuf471bwpv0g"]
+
+[ext_resource type="Texture2D" uid="uid://c6xqyt2bhy1nk" path="res://assets/sprites/rightclick.png" id="1_7g3qc"]
+[ext_resource type="Texture2D" uid="uid://btvfhlyfxvyxo" path="res://assets/sprites/leftclick.png" id="1_ahhgo"]
+[ext_resource type="Script" uid="uid://lfe8g6wgo3rn" path="res://scripts/keybind.gd" id="1_hylqw"]
+
+[node name="keybind" type="Control" unique_id=812903507]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hylqw")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1763902211]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -58.5
+offset_right = 39.0
+grow_vertical = 0
+texture = ExtResource("1_7g3qc")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=1325220848]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 43.0
+offset_top = -11.5
+offset_right = 138.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "Stand"
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1700250193]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -108.0
+offset_right = 39.0
+offset_bottom = -49.5
+grow_vertical = 0
+texture = ExtResource("1_ahhgo")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TextureRect2" unique_id=73686775]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 43.0
+offset_top = -11.5
+offset_right = 138.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "Draw"

@@ -1,0 +1,7 @@
+Create a "hover" to 3D trump cards
+Add a "DATA" global variables to store trump cards' data
+Move TRUMP data to just fetch the weght so we can dynamically change them
+Improve the Inventory UI a bit
+Add musics
+
+17
