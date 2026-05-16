@@ -1,13 +1,11 @@
-# Godot 4+
-.godot/
 .import/
-export.cfg
-export_credentials.cfg
-
-# Mono (kalau pakai C#)
+.export/
+.export_presets.cfg
 .mono/
 data_*/
-mono_crash.*.json
+android/build/
 
-# OS
+.godot/
+
 .DS_Store
+Thumbs.db
