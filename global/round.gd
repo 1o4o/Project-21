@@ -104,11 +104,18 @@ func passTurn(entity):
 		
 	if entity == GLOBAL.entity.ENEMY:
 		phase = GLOBAL.state.ENEMYTURN
-		GLOBAL.processAI()
+		AI.processAI()
 	return
 
 func showdown():
+	phase = GLOBAL.state.SHOWDOWN
 	showdownTrigger = 0
 	GLOBAL.subtitle(GLOBAL.dialogue["showdown"].pick_random())
 	await GLOBAL.wait(2)
 	revealAllCards()
+	await GLOBAL.wait(3)
+	processResult()
+
+func processResult():
+	baseRoundBet += 1
+	initializeRound()

@@ -17,9 +17,9 @@ glow_bloom = 0.3
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6wevv"]
 shader = ExtResource("4_c1pb6")
-shader_parameter/vignette_intensity = 0.3950000187625
-shader_parameter/vignette_opacity = 0.2000000095
-shader_parameter/grain_amount = 0.0450000021375
+shader_parameter/vignette_intensity = 0.400000019
+shader_parameter/vignette_opacity = 0.30000001425
+shader_parameter/grain_amount = 0.030000001425
 
 [node name="mainScene" type="Node3D" unique_id=1998838602]
 script = ExtResource("1_gubc5")

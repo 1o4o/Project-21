@@ -7,9 +7,6 @@ var isToggleOnCooldown = false
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("debug"):
-		print("\nTest No. " + str(GLOBAL.testNo))
-		print("Player Value: " + str(ROUND.playerValue) + " vs. AI Value: " + str(ROUND.enemyValue) + " (Target value: 21)")
-		GLOBAL.testNo += 1
 		await GLOBAL.resetMatchData()
 		get_tree().reload_current_scene()
 		return
@@ -79,8 +76,8 @@ func spawnTextLabel(content: String, mousePos: Vector2, color: Color = Color.WHI
 
 func _ready() -> void:
 	TRUMP.data = BASE.data.duplicate()
-	for i in range(3):
-		GLOBAL.playerInventory.append(TRUMP.random())
+	for i in range(TRUMP.data.size()):
+		GLOBAL.playerInventory.append(TRUMP.data[i])
 	ROUND.initializeRound()
 	while true:
 		await await GLOBAL.wait(randi_range(5, 30))

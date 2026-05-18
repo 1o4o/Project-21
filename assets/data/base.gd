@@ -20,7 +20,7 @@ var data = [
 	{
 		"name": "Draw 1",
 		"desc": "Draw the card number 1. If this card is already on the table, nothing happens.",
-		"flavorText": "Some outcomes arrive only because we demanded them.",
+		"flavorText": "“The Spark”",
 		"tooltip": null,
 		"weight": 290,
 		"weightChange": -15
@@ -28,7 +28,7 @@ var data = [
 	{
 		"name": "Draw 2",
 		"desc": "Draw the card number 2. If this card is already on the table, nothing happens.",
-		"flavorText": "Some outcomes arrive only because we demanded them.",
+		"flavorText": "“The Pair”",
 		"tooltip": null,
 		"weight": 290,
 		"weightChange": -15
@@ -36,7 +36,7 @@ var data = [
 	{
 		"name": "Draw 3",
 		"desc": "Draw the card number 3. If this card is already on the table, nothing happens.",
-		"flavorText": "Some outcomes arrive only because we demanded them.",
+		"flavorText": "“The Triad”",
 		"tooltip": null,
 		"weight": 290,
 		"weightChange": -15
@@ -44,7 +44,7 @@ var data = [
 	{
 		"name": "Draw 4",
 		"desc": "Draw the card number 4. If this card is already on the table, nothing happens.",
-		"flavorText": "Some outcomes arrive only because we demanded them.",
+		"flavorText": "“The Stagnant”",
 		"tooltip": null,
 		"weight": 290,
 		"weightChange": -15
@@ -52,7 +52,7 @@ var data = [
 	{
 		"name": "Draw 5",
 		"desc": "Draw the card number 5. If this card is already on the table, nothing happens.",
-		"flavorText": "Some outcomes arrive only because we demanded them.",
+		"flavorText": "“The Quinary”",
 		"tooltip": null,
 		"weight": 290,
 		"weightChange": -15
@@ -60,7 +60,7 @@ var data = [
 	{
 		"name": "Draw 6",
 		"desc": "Draw the card number 6. If this card is already on the table, nothing happens.",
-		"flavorText": "Some outcomes arrive only because we demanded them.",
+		"flavorText": "“The Ritual”",
 		"tooltip": null,
 		"weight": 290,
 		"weightChange": -15
@@ -68,7 +68,7 @@ var data = [
 	{
 		"name": "Draw 7",
 		"desc": "Draw the card number 7. If this card is already on the table, nothing happens.",
-		"flavorText": "Some outcomes arrive only because we demanded them.",
+		"flavorText": "“The Zenith”",
 		"tooltip": null,
 		"weight": 290,
 		"weightChange": -15
@@ -77,7 +77,7 @@ var data = [
 		"name": "Go for 17",
 		"desc": "Set the target number to 17.",
 		"flavorText": "“To settle for less is still to reach for something.”",
-		"tooltip": "If multiple \"Go for X\" cards are in play, only the most recently played one takes effect.",
+		"tooltip": "If multiple \"Go for X\" cards are in the table, only the most recently played one takes effect.",
 		"weight": 270,
 		"weightChange": 25
 	},
@@ -85,7 +85,7 @@ var data = [
 		"name": "Go for 24",
 		"desc": "Set the target number to 24.",
 		"flavorText": "“Hope demands more than reason ever allowed.”",
-		"tooltip": "If multiple \"Go for X\" cards are in play, only the most recently played one takes effect.",
+		"tooltip": "If multiple \"Go for X\" cards are in the table, only the most recently played one takes effect.",
 		"weight": 270,
 		"weightChange": 25
 	},
@@ -189,7 +189,7 @@ var data = [
 		"name": "Mimic",
 		"desc": "Copy the effect of the last trump card played this round.",
 		"flavorText": "“Desperation makes us mimic the miracles of others.”",
-		"tooltip": "Playing this as the first trump card of the round or trying to copy another \"Mimic\" trump card will cause nothing to happen..",
+		"tooltip": "Playing this as the first trump card of the round or trying to copy another \"Mimic\" trump card will cause nothing to happen.",
 		"weight": 40,
 		"weightChange": 20
 	},
@@ -328,6 +328,14 @@ var data = [
 		"tooltip": null,
 		"weight": 150,
 		"weightChange": 10
+	},
+	{
+		"name": "Reprieve",
+		"desc": "Reduce this round's bet by 2. While this is on the table, every newly played trump card increases this round's by 1, capped at 4 total increases.",
+		"flavorText": "“We call it a second chance, but it is merely an extension of the sentence.”",
+		"tooltip": null,
+		"weight": 150,
+		"weightChange": 10
 	}
 ]
 
@@ -353,3 +361,30 @@ var DIFFICULTY_PROFILES = {
 		"peek_chance": 0.40,              # 40% chance to completely read your hand
 	}
 }
+
+var TAGS = [
+	{
+		"name": "Perishable",
+		"description": "This trump card is automatically destroyed if it remains in your hand for more than 2 rounds."
+	},
+	{
+		"name": "Bleed",
+		"description": "When this trump card is played, it will feed on a random trump card in your inventory, destroying it."
+	},
+	{
+		"name": "Imaginary",
+		"description": "When this trump card is played, creatre a non-imaginary copy of it in your inventory."
+	},
+	{
+		"name": "Fragile",
+		"description": "25% chance this trump card has no effect when played."
+	},
+	{
+		"name": "Volatile",
+		"description": "This trump card is destroyed if the current round's bet increases."
+	},
+	{
+		"name": "Joker",
+		"description": "15% chance this trump card transforms into a random trump card once played."
+	}
+]

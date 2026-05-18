@@ -4,8 +4,6 @@ enum state {INTRO, NEWROUND, PLAYERTURN, ENEMYTURN, PROCESS, SHOWDOWN, RESULT}
 enum entity {PLAYER, ENEMY}
 enum tab {TRUMPCARD, ABILITIES, OVERVIEW}
 
-var testNo = 1
-
 var deck = []
 var playerDeck = []
 var enemyDeck = []
@@ -65,7 +63,7 @@ const CARD_SCENE = preload("res://scenes/card.tscn")
 
 const cardWidth = 256
 const cardHeight = 320
-const startingX = -0.25
+const cardStartX = -0.25
 const nextX = 0.15
 
 func wait(seconds: float) -> Signal:
@@ -109,9 +107,9 @@ func drawCard(target, isHidden, _isForced = false):
 	
 func getCardPosition(target):
 	if target == entity.PLAYER:
-		return Vector3(startingX + (playerDeck.size() * nextX), -0.29, 2.05)
+		return Vector3(cardStartX + (playerDeck.size() * nextX), -0.29, 2.05)
 	elif target == entity.ENEMY:
-		return Vector3(startingX + (enemyDeck.size() * nextX), -0.29, 1.6)
+		return Vector3(cardStartX + (enemyDeck.size() * nextX), -0.29, 1.6)
 	
 	return null
 
@@ -194,112 +192,3 @@ func subtitle(content: String, duration: float = 2.0):
 	tween.tween_interval(duration)
 	tween.tween_property(label, "modulate:a", 0.0, 0.8).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	tween.tween_callback(label.queue_free)
-
-func processAI():
-	var myValue = ROUND.enemyValue + enemyDeck[0]["value"]
-	var target = ROUND.targetValue
-	
-	var visiblePlayerValue = ROUND.playerValue - playerDeck[0]["value"] 
-	
-	# --- PARANOIA AND ENVIRONMENT CALCULATIONS ---
-	# 1. Paranoia (Target value shifts)
-	# If the target value changes dynamically or via player trump cards, 
-	# standing right at the target boundary becomes dangerous.
-	var is_target_volatile: bool = ROUND.has_method("is_target_dynamic") and ROUND.is_target_dynamic()
-	
-	# 2. Player Inventory Threat Level
-	# If player holds a massive hand of trump cards, they can easily manipulate values later
-	var player_trump_count: int = playerInventory.size() if "playerInventory" in self else 0
-	var player_threat_multiplier: float = 1.0 + (player_trump_count * 0.08) # +8% paranoia per card held
-	
-	# 3. Desperate Measures (AI Life Tracking)
-	# If the AI's round-ending health/lives are critically low, it plays with intense urgency
-	var ai_lives: int = ROUND.enemyLives if "enemyLives" in ROUND else 3
-	var is_critically_low_health: bool = (ai_lives <= 1)
-	
-	# Adjust dynamic decision thresholds based on environmental dread
-	var safety_threshold: float = 0.40
-	var desperation_trigger: float = 0.55
-	
-	if is_critically_low_health:
-		safety_threshold = 0.30       # Desperate AI takes crazier card risks to avoid losing
-		desperation_trigger = 0.45    # Lower panic bar to force strategic over-draws
-	
-	# --- TACTICAL MEMORY RECONSTRUCTION ---
-	var judgementCounting = []
-	for i in range(11):
-		judgementCounting.append(i + 1)
-		
-	for card in enemyDeck:
-		judgementCounting.erase(card["value"])
-		
-	for i in range(1, playerDeck.size()):
-		judgementCounting.erase(playerDeck[i]["value"])
-		
-	# --- TACTICAL JUDGEMENT MATH ---
-	var safe_cards: float = 0.0
-	var total_unknown_cards: float = float(judgementCounting.size())
-	
-	for remaining_card in judgementCounting:
-		if myValue + remaining_card <= target:
-			safe_cards += 1.0
-			
-	var safe_draw_chance: float = 0.0
-	if total_unknown_cards > 0.0:
-		safe_draw_chance = safe_cards / total_unknown_cards
-
-	# --- PREDICTIVE ANALYSIS ---
-	var cards_that_beat_me: float = 0.0
-	for hidden_card_possibility in judgementCounting:
-		var simulated_player_total = visiblePlayerValue + hidden_card_possibility
-		if simulated_player_total <= target and simulated_player_total >= myValue:
-			cards_that_beat_me += 1.0
-			
-	var player_likely_winning_chance: float = 0.0
-	if total_unknown_cards > 0.0:
-		player_likely_winning_chance = cards_that_beat_me / total_unknown_cards
-		
-	# Apply threat modifier to player win calculation
-	player_likely_winning_chance *= player_threat_multiplier
-
-	# --- PARANOIA EXECUTION ENGINE ---
-	#print("--- AI TURN) ---")
-	#print("AI Hand: ", myValue, " | Target: ", target)
-	#print("Modified Player Win Chance: ", player_likely_winning_chance * 100.0, "%")
-	
-	# Rule 1: Absolute Cap Check
-	if visiblePlayerValue >= target:
-		#print("AI stands (Player is visibly busted. Victory guaranteed).")
-		ROUND.enemyStand()
-		
-	elif myValue >= target:
-		#print("AI stands (At or over target layout limitations).")
-		ROUND.enemyStand()
-		
-	# Rule 2: Dynamic Target Paranoia Override
-	# If the target is volatile and the player has a heavy threat pool, standing exactly 
-	# 1 or 2 points beneath the target leaves the AI vulnerable to value manipulation.
-	elif is_target_volatile and myValue <= (target - 2) and safe_draw_chance > 0.60 and player_trump_count >= 3:
-		#print("AI hits due to Target Paranoia! (Fears player will shift the boundaries or crush a close margin).")
-		ROUND.enemyDraw()
-
-	# Rule 3: Extreme Desperation
-	elif safe_draw_chance < safety_threshold and player_likely_winning_chance > desperation_trigger:
-		#print("AI hits on Desperation! (Low safety, but passing means definitive death).")
-		ROUND.enemyDraw()
-		
-	# Rule 4: Standard Defensive Play
-	elif safe_draw_chance < safety_threshold:
-		if myValue > visiblePlayerValue:
-			pass
-			#print("AI stands (High risk, holding a visible lead).")
-		else:
-			pass
-			#print("AI stands (High risk, betting on player variance or bust).")
-		ROUND.enemyStand()
-			
-	# Rule 5: Standard Aggressive Play
-	else:
-		#print("AI hits (Calculated safety parameters met).")
-		ROUND.enemyDraw()
-		
