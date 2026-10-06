@@ -1,6 +1,6 @@
 extends Node
 
-const TARGET_VALUE = 21
+var TARGET_VALUE = 21
 
 # Track overall statistics
 var ai_1_wins : int = 0
@@ -8,12 +8,13 @@ var ai_2_wins : int = 0
 var ties : int = 0
 
 func _ready():
-	run_mass_simulation(300)
+	run_mass_simulation(3000)
 
 func run_mass_simulation(runs: int):
 	print("Starting sandboxed AI battle simulation (", runs, " rounds)...")
 	
 	for match_idx in range(runs):
+		TARGET_VALUE = randf_range(14, 24)
 		var match_result = simulate_single_round()
 		if match_result == 1:
 			ai_1_wins += 1

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b7ppb8elyi4kh" path="res://scripts/camera_3d.gd" id="1_0f027"]
 [ext_resource type="Script" uid="uid://d5ccow6rgmq3" path="res://scripts/main_scene.gd" id="1_gubc5"]
 [ext_resource type="PackedScene" uid="uid://duop6hh7sfui" path="res://scenes/room.tscn" id="2_2c62f"]
+[ext_resource type="PackedScene" uid="uid://drqlymatkdkv5" path="res://scenes/pause_ui.tscn" id="4_6wevv"]
 [ext_resource type="Shader" uid="uid://baqkddlmenjy7" path="res://assets/shaders/post_process.gdshader" id="4_c1pb6"]
 [ext_resource type="PackedScene" uid="uid://bjuf471bwpv0g" path="res://scenes/keybind.tscn" id="4_d5x1h"]
 [ext_resource type="PackedScene" uid="uid://cfs23s1i6q6c3" path="res://scenes/inventory.tscn" id="5_gubc5"]
@@ -33,6 +34,14 @@ script = ExtResource("1_0f027")
 tilt_amount = 15.0
 
 [node name="room" parent="." unique_id=1567382256 instance=ExtResource("2_2c62f")]
+
+[node name="pauseCanvas" type="CanvasLayer" parent="." unique_id=972267901]
+process_mode = 3
+layer = 999
+visible = false
+
+[node name="pauseUI" parent="pauseCanvas" unique_id=160701337 instance=ExtResource("4_6wevv")]
+metadata/_edit_use_anchors_ = true
 
 [node name="processingCanvas" type="CanvasLayer" parent="." unique_id=1769883775]
 layer = 999

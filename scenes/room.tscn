@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://duop6hh7sfui"]
 
-[ext_resource type="PackedScene" uid="uid://dojvn58hsyuie" path="res://assets/Book Stack.glb" id="1_36trf"]
+[ext_resource type="PackedScene" uid="uid://dojvn58hsyuie" path="res://assets/models/Book Stack.glb" id="1_36trf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v321d"]
 albedo_color = Color(0.07739862, 0.17422655, 0.048853107, 1)
@@ -68,6 +68,11 @@ material = SubResource("StandardMaterial3D_88gup")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=1060878365]
 transform = Transform3D(48.625237, 0, 0, 0, 1.4585747, 0, 0, 0, 0.53999984, 0, 1.2702, -4.8)
+size = Vector3(1, 10.8, 1)
+material = SubResource("StandardMaterial3D_bisa2")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="." unique_id=105267212]
+transform = Transform3D(-2.1254768e-06, 0, 0.5399999, 0, 1.4585748, 0, -48.625244, 0, -2.3604144e-08, 7.28812, 1.2702, -4.8)
 size = Vector3(1, 10.8, 1)
 material = SubResource("StandardMaterial3D_bisa2")
 

@@ -21,28 +21,29 @@ func _input(event: InputEvent) -> void:
 			return
 		if ROUND.phase != GLOBAL.state.PLAYERTURN:
 			return
+		
+	# Determine the action based on mouse button OR screen position
+		var is_left_action = (event.button_index == MOUSE_BUTTON_LEFT)
+		var is_right_action = (event.button_index == MOUSE_BUTTON_RIGHT)
+
 		if event.double_click:
-			if ROUND.phase != GLOBAL.state.PLAYERTURN:
-				return
-			match event.button_index:
-				MOUSE_BUTTON_LEFT:
-					if overkillCheck():
-						spawnTextLabel(GLOBAL.dialogue["overkill"].pick_random(), event.position, Color.RED)
-						return
-					spawnTextLabel("DRAW!", event.position)
-					ROUND.playerDraw()
-				MOUSE_BUTTON_RIGHT:
-					spawnTextLabel("STAND!", event.position)
-					ROUND.playerStand()
+			if is_left_action:
+				if overkillCheck():
+					spawnTextLabel(GLOBAL.dialogue["overkill"].pick_random(), event.position, Color.RED)
+					return
+				spawnTextLabel("DRAW!", event.position)
+				ROUND.playerDraw()
+			elif is_right_action:
+				spawnTextLabel("STAND!", event.position)
+				ROUND.playerStand()
 		else:
-			match event.button_index:
-				MOUSE_BUTTON_LEFT:
-					if overkillCheck():
-						spawnTextLabel(GLOBAL.dialogue["overkill"].pick_random(), event.position, Color.RED)
-						return
-					spawnTextLabel("Draw?", event.position)
-				MOUSE_BUTTON_RIGHT:
-					spawnTextLabel("Stand?", event.position)
+			if is_left_action:
+				if overkillCheck():
+					spawnTextLabel(GLOBAL.dialogue["overkill"].pick_random(), event.position, Color.RED)
+					return
+				spawnTextLabel("Draw?", event.position)
+			elif is_right_action:
+				spawnTextLabel("Stand?", event.position)
 
 func spawnTextLabel(content: String, mousePos: Vector2, color: Color = Color.WHITE):
 	var label = Label.new()

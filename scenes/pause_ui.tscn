@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://drqlymatkdkv5"]
+
+[ext_resource type="Script" uid="uid://dmy0dyow7gybt" path="res://scripts/pause_ui.gd" id="1_3egln"]
+[ext_resource type="FontFile" uid="uid://6gyf420bkkab" path="res://assets/fonts/FingerPaint-Regular.ttf" id="1_uwb1u"]
+[ext_resource type="Shader" uid="uid://nd4jtats6xuj" path="res://assets/shaders/pause.gdshader" id="1_ypbrs"]
+[ext_resource type="Script" uid="uid://c2a7bn6yfdfc3" path="res://scripts/button.gd" id="3_vcehk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vcehk"]
+shader = ExtResource("1_ypbrs")
+shader_parameter/static_intensity = 0.40400001919
+shader_parameter/scanline_count = 10.0
+
+[node name="pauseUI" type="Control" unique_id=160701337]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3egln")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1914211056]
+material = SubResource("ShaderMaterial_vcehk")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1145364020]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -251.5
+offset_top = 28.0
+offset_right = 251.5
+offset_bottom = 128.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_uwb1u")
+theme_override_font_sizes/font_size = 67
+text = "GAME PAUSED"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1414691782]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.5
+offset_top = -116.0
+offset_right = 126.5
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1869794122]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_uwb1u")
+theme_override_font_sizes/font_size = 45
+text = "Resume"
+flat = true
+script = ExtResource("3_vcehk")
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1971259042]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_uwb1u")
+theme_override_font_sizes/font_size = 45
+text = "Options"
+flat = true
+script = ExtResource("3_vcehk")
+
+[node name="Button4" type="Button" parent="VBoxContainer" unique_id=1426178792]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_uwb1u")
+theme_override_font_sizes/font_size = 45
+text = "Collections"
+flat = true
+script = ExtResource("3_vcehk")
+
+[node name="Button5" type="Button" parent="VBoxContainer" unique_id=1197667135]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_uwb1u")
+theme_override_font_sizes/font_size = 45
+text = "Main Menu"
+flat = true
+script = ExtResource("3_vcehk")

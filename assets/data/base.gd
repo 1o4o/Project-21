@@ -246,8 +246,8 @@ var data = [
 		"desc": "Destroy the opponent's last placed trump card on the table.",
 		"flavorText": "“All it takes to end a miracle is silence.”",
 		"tooltip": null,
-		"weight": 260,
-		"weightChange": 30
+		"weight": 280,
+		"weightChange": 35
 	},
 	{
 		"name": "Defibrillate",
@@ -315,7 +315,7 @@ var data = [
 	},
 	{
 		"name": "Hereditary",
-		"desc": "Once played, select a trump card. That trump card will have a significantly higher chance of appearing until your next turn.",
+		"desc": "Once played, select a trump card. That trump card will have a significantly higher chance of appearing until your next turn ends.",
 		"flavorText": "“Inheritance is only the passing down of old burdens.”",
 		"tooltip": "Temporarily quadruples the base weight chance of the selected trump card until your next turn ends.",
 		"weight": 200,
@@ -331,11 +331,91 @@ var data = [
 	},
 	{
 		"name": "Reprieve",
-		"desc": "Reduce this round's bet by 2. While this is on the table, every newly played trump card increases this round's by 1, capped at 4 total increases.",
+		"desc": "Reduce this round's bet by 2. While this is on the table, every newly played trump card increases this round's bet by 1, capped at 4 total increases.",
 		"flavorText": "“We call it a second chance, but it is merely an extension of the sentence.”",
 		"tooltip": null,
 		"weight": 150,
 		"weightChange": 10
+	},
+	{
+		"name": "Will to Survive",
+		"desc": "Increase your life by 1, then immediately draw a card from the deck.",
+		"flavorText": "“Like a stranded whale, there is no struggle, just despair.”",
+		"tooltip": null,
+		"weight": 200,
+		"weightChange": -15
+	},
+	{
+		"name": "Spectator Effect",
+		"desc": "Select one of your placed trump cards on the table to protect, making it nullify the first negative trump card effects that targets it for this round.",
+		"flavorText": "“A room full of witnesses, and not a single hand raised to stop it.”",
+		"tooltip": null,
+		"weight": 150,
+		"weightChange": -15
+	},
+	{
+		"name": "Calamity",
+		"desc": "Receive four trump cards, then immediately draw an OVERKILL card into your hand.",
+		"flavorText": "“To flood a dry well is only to invite a different kind of drowning.”",
+		"tooltip": "A round is lost regardless of your value when an OVERKILL card is in your hand when it ends.",
+		"weight": 220,
+		"weightChange": -30
+	},
+	{
+		"name": "Audience Effect",
+		"desc": "While active on the table, draw an extra trump card at the start of your every turn. This card is not cleaned up when the round ends.",
+		"flavorText": "“Do not disappoint an audience that came only to watch an execution.”",
+		"tooltip": null,
+		"weight": 270,
+		"weightChange": -15
+	},
+	{
+		"name": "Curiosity",
+		"desc": "Draw the highest value card available in the deck.",
+		"flavorText": "“We peer into the dark simply to prove we can survive what looks back.”",
+		"tooltip": "If your total value is greater than or equal to the target value, nothing happens.",
+		"weight": 200,
+		"weightChange": 15
+	},
+	{
+		"name": "Hawthorne Effect",
+		"desc": "Increase this round's bet by 1 for each active trump card the opponent has placed on the table.",
+		"flavorText": "“The subject strictly alters their parameters when they realize the lens is focused on them.”",
+		"tooltip": null,
+		"weight": 220,
+		"weightChange": -15
+	},
+	{
+		"name": "Frenzy",
+		"desc": "At the end of this round, if on the table, this card destroys two random trump cards currently on the board.",
+		"flavorText": "“A growing power, strong enough to destroy everything.”",
+		"tooltip": null,
+		"weight": 190,
+		"weightChange": 20
+	},
+	{
+		"name": "Targeted Destroy",
+		"desc": "Select one of the opponent's placed trump card on the table to destroy.",
+		"flavorText": "“A growing power, strong enough to destroy everything.”",
+		"tooltip": null,
+		"weight": 350,
+		"weightChange": -35
+	},
+	{
+		"name": "Flywheel Effect",
+		"desc": "If the current round's bet is equal or higher than your remaining lives, nullify the bet completely when the round is lost.",
+		"flavorText": "“A growing power, strong enough to destroy everything.”",
+		"tooltip": null,
+		"weight": 100,
+		"weightChange": 15
+	},
+		{
+		"name": "Reincarnation",
+		"desc": "Destroy the opponent's last placed trump card on the table. Receive 1 random trump card.",
+		"flavorText": "“A growing power, strong enough to destroy everything.”",
+		"tooltip": null,
+		"weight": 200,
+		"weightChange": 15
 	}
 ]
 

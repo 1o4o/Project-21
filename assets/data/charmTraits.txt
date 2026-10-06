@@ -1,0 +1,320 @@
+Charm of Mimicry
+A gift from the Rite of Mimicry. Your constant jealousy allows you to glimpse the fortune of others, slowly eroding your true identity.
+
+Traits
+Borrowed Self: Your jealousy leaves you hollow at the edge of death; you receive only one random trump card at the beginning of each round instead of the standard two.
+Perfect Imitation: At the start of every even-numbered round, your identity adapts to your surroundings, granting you a "Mimic" trump card.
+
+Masteries
+Jealousy: Use a "Mimic" trump card 10/25/40 times.
+No Seekout: Win 3/7/15 rounds purely by only using a "Mimic" trump card.
+Imperfect Disruption: Copy the effect of a bet-changing trump card 7/15/25 times.
+
+
+
+Charm of Volatility
+A gift from the Rite of Volatility. Even amid impending ruin, your instability spreads to all who take part.
+
+Traits
+Wild Oscillation: Your chaotic nature causes any bet-changing trump card to have a 70% chance double its intended effect or fizzle out entirely causing it to have no effect.
+Dead Calm: If a round ends with a total bet of 0, the lingering instability repents and completely blocks you from using any trump cards in the subsequent round.
+
+Masteries
+Unwavering Line: Use a bet-changing trump card 10/20/40 times.
+Overreach: Double a round's initial bet and win the round 5/10/20 times.
+Weight of It: Win 3/7/11 rounds while being blocked from using trump cards.
+
+
+
+Charm of Determination
+A gift from the Rite of Determination. Your unyielding will draws great power from despair itself.
+
+Traits
+Will to Survive: When facing absolute death at the end of a round, your unyielding will refuses fate and triggers a desperate revival, returning you to exactly 1 life. This revival can only triggers once per match.
+Despair Resolve: Following your revival, the despair lingers, forcing the base bet of every subsequent round to start at 2.
+
+Masteries
+Will to Survive: Survive 7/14/25 rounds after using the revival.
+Carried Weight: Increase a round's bet by 8/16/25 after using the revival.
+Requiem: Win 2/5/10 total games after using the revival.
+
+
+
+Charm of Insight
+A gift from the Rite of Insight. Even when the future promises despair, you confront the nightmare head-on.
+
+Traits
+Deck Perception: At the start of your every turn, your heightened vision allows you to perceive whether the very top card of the deck carries an even or odd value.
+Neural Sense: You look past the opponent's doubts, allowing you to perceiving whether their face-down hidden card possesses an even or odd value.
+Tunnel Vision: Your overwhelming awareness clouds your most obvious sense; all cards drawn by the opponent have their values hidden from you until their next turn. (Does not apply to "Hush" cards or the first card drawn each round.)
+
+Masteries
+Foreseeing: Win 3/5/10 rounds without drawing any cards.
+Glimpse Alone: Use a "Peek" trump card 4/8/13 times.
+Wide Margin: Win 3/5/10 rounds while the difference between your total value and the target value is higher than 5.
+
+
+
+Charm of Severance
+A gift from the Rite of Severance. You learned that survival often demands sacrifice, even of yourself.
+
+Traits
+Vicious Exchange: Survival demands immediate sacrifice; you are granted the ability to completely destroy 3 trump cards directly from your hand to recover 1 life.
+Faltering Edge: The act of destruction is erratic and brutal; using a standard "Destroy" trump card has a 35% chance to fail and do nothing.
+
+Masteries
+Sacrificial Lamb: Destroy 15/30/50 total trump cards to gain lives.
+Clean Cut: Use a "Destroy" trump card and have its effect succeed 10/20/35 times.
+Unequal Return: Gain 7/14/25 total lives from destroying trump cards.
+
+
+
+Charm of Gleam
+A gift from the Rite of Gleam. Even in the dark, something still waits to be proven.
+
+Traits
+Return to Dust: When you lose a round with a bet higher than 0, your radiant aura delays the damage of the round, holding it back until the end of the next round.
+Reprieve: If you manage to claim victory before the delayed damage can strike, the delayed damage is halved (rounded down) and your victory manifests a new random trump card.
+Collapse: If you falter and lose a second time while damage is already hanging over you, the delayed damage violently doubles, and the current round's losses strike your life pool immediately.
+
+Masteries
+Before It Lands: Win 4/7/12 rounds before a delayed damage is applied.
+Dulled Impact: Halve a delayed damage and reduce it by 3/10/20 lives.
+Borrowed Time: Delay 7/15/25 total damages.
+
+
+
+Charm of Precision
+A gift from the Rite of Precision. Perfection is unforgiving. When every action is measured, even chance bends to your will.
+
+Traits
+Flawless Execution: Being a flawless genius, you reward yourself with 2 bonus lives whenever your total value is exactly equal to the target value.
+No Composure: Whenever you Bust in a round, the sudden shame of a "flawless" individual violently destroys all but one single, random trump card in your hand.
+
+Masteries
+Narrow Margin: Win 2/5/10 matches with a target deviation of less than or equal to 1.
+Precise: Hit the target value 10/20/35 times.
+Damage Control: Bust while having less than 3 trump cards in your inventory 4/8/15 times.
+
+
+
+Charm of Obsession
+A gift from the Rite of Obsession. Your fixation binds you forward, refusing release no matter the cost.
+
+Traits
+Bind: Driven by an absolute fixation, the first trump card you play each round will instantly duplicate a fresh copy of itself back into your hand.
+Claustrophobic Grip: Your tunnel vision narrows your tactical space, causing you to be physically incapable of holding more than 3 trump cards in your hand at any given time.
+
+Masteries
+Hyperfixation: Play the exact same trump card (duplicated by the trait) 10/20/35 times.
+Echo Chamber: Win a round while holding 3 identical trump cards in your hand 4/8/15 times.
+Singular Focus: Win 3/6/12 matches without ever filling your trump card hand to its maximum capacity of 3.
+
+
+
+Charm of Turmoil
+A gift from the Rite of Turmoil. Chaos follows in your wake, thriving on conflict and feeding on unrest.
+
+Traits
+Rule of Chaos: Chaos thrives on arbitrary constraints, generating a random number between 1 and 4 each round. If you play exactly that many trump cards, you gain 1 life.
+Constraints: Failing to feed the chaos breeds severe unrest; if you do not meet the exact trump card constraint, the current round's bet increases by 2 at the end of a lost round.
+
+Masteries
+Perfect Anarchy: Hit the exact randomly generated trump card count and win the round 5/12/22 times.
+Rolling Thunder: Survive and win a round where the bet was increased by at least 4 due to the turmoil penalty 3/7/12 times.
+Controlled Chaos: Play exactly 4 trump cards in a single round and still manage to win 4/8/15 times.
+
+
+
+Charm of Free Will
+A gift from the Rite of Free Will. To choose freely is to accept the weight of consequence, even when it breaks you.
+
+Traits
+Transmutation of Choice: To choose freely is to rewrite your own options; once per round, you may sacrifice two trump card to receive a trump card of your choice from the available pool.
+Conviction: True choices cannot be undone; a trump card previously obtained through the sacrifice can never be chosen again.
+Decision Fatigue: Total freedom demands absolute commitment; the mental strain of sacrificing completely blocks you from using any other trump cards for the remainder of that round.
+
+Masteries
+Alchemist's Choice: Transform a trump card into a clutch winning card and win the round 5/12/25 times.
+Self-Imposed Silence: Win a round purely on card value after being blocked from using trump cards via transformation 4/9/16 times.
+Heavy Toll: Sacrifice a rare or high-tier trump card to transform another card 10/20/35 times.
+
+
+
+Charm of Conviction
+A gift from the Rite of Conviction. Doubt weakens the hand more than any loss ever could.
+
+Traits
+Guided Draw: Absolute faith guides you; instead of drawing entirely at random, your unwavering intent yields a 40% chance of drawing a card guaranteed not to bust you, and a 60% chance of drawing randomly like normal.
+Open Resolve: True conviction hides nothing from the world; both you and the opponent are immediately notified whether this safe-draw effect successfully triggers or fails.
+Unwavering Stand: Once you choose to Stand, your choice is absolute, causing you to be completely blocked from drawing any more cards for the remainder of the round, including trump cards and trait effects.
+
+Masteries
+Blind Faith: Draw a card using the 40% safe-draw mechanic when any regular random card would have busted you 5/12/20 times.
+Firm Stance: Win 7/15/30 rounds by choosing to Stand immediately after the safe-draw mechanic fails (the 60% random trigger).
+Unshakable: Win a match without ever busting a single time 2/5/10 times.
+
+
+
+Charm of Delusion
+A gift from the Rite of Delusion. Reality bends easiest when you refuse to acknowledge it.
+
+Traits
+Dismiss: Reality bends easiest when you refuse to accept your current state; if you have lost a round previously in the match, you may forcefully end the current round immediately and skip straight to the showdown, halving the current bet (rounded down).
+Hollow Victory: Living in a fabrication cheapens the worth of actual reality; when you win a round, the lives you steal away from the opponent are cut in half (rounded down).
+
+Masteries
+Reality Warp: Force a showdown immediately while having a lower hand value than the opponent, but still winning due to the bet halving 3/7/15 times.
+Mirage Victory: Win a match where you used the immediate showdown ability at least 3 times 2/5/10 times.
+Scraps of Triumph: Steal a total of 10/20/40 lives from the opponent, despite the halving penalty.
+
+
+
+Charm of Stagnation
+A gift from the Rite of Stagnation. You have learned that sometimes, the only way to survive is to refuse to move.
+
+Traits
+Immovable: By refusing to move, you refuse to fall; if you do not draw any additional cards during a round (staying on your initial two), you cannot lose more than 2 lives, regardless of the bet value.
+Inversion: You bend shifting external tides into personal stability; any bet-changing trump cards you play increase your own life total instead of modifying the current round's bet.
+Slow Decay: A total refusal to change leads to inevitable decay; your maximum life total is initially capped at 14, and this maximum cap permanently decreases by 1 every round. If the maximum life cap ever reaches 0, you perish immediately.
+
+Masteries
+Unmoving Wall: Win 5/12/25 rounds without drawing any additional cards (staying on your initial two).
+Iron Anchor: Convert a bet-changing trump card into 3/5/8 lives in a single match using the stagnation conversion.
+Beat the Clock: Win a match before your life cap drops down to 4 or lower 2/5/10 times.
+
+
+
+Charm of Fanaticism
+A gift from the Rite of Fanaticism. Zeal guides your hand, even when reason would have you falter.
+
+Traits
+Sacred Number: Zeal guides your hand to seek perfection in flawed omens; if you have more than one life and your total value hits exactly 13, your blind devotion consumes 1 life to count your hand as hitting the exact target value.
+Fervor Draw: Your frantic, escalating energy alters the card pool, doubling your chance of drawing "Draw X" trump cards.
+Shared Madness: Your fanaticism cannot be contained; it spills wildly over to the other side. Every single time you draw a standard card, the opponent receives one random trump card.
+
+Masteries
+Unholy 13: Trigger the "Target Value 13" effect to win a round 3/7/15 times.
+Zealot's Flood: Win a round where the opponent holds 5 or more trump cards due to your drawing triggers 4/8/15 times.
+Martyrdom: Win a match after triggering the life-consuming 13-value effect at least twice 2/5/10 times.
+
+
+
+Charm of Premonition
+A gift from the Rite of Premonition. The future whispers in fragments, but listening too closely may betray you.
+
+Traits
+Prophetic Guess: Before a showdown starts, you may choose to guess the opponent's total value. If you are correct, you gain 1 life. If you fail, your pathetic guess manifests as an OVERKILL card.
+Clarified Echoes: Your gained lives are increased by 1 for every consecutive correct guess, capped at a maximum of 3 lives total.
+Glimpse Fatigue: Peering into the future takes a heavy toll on the mind; once you make a prediction in a round, you cannot predict again in the next round.
+
+Masteries
+True Prophet: Achieve a max-tier consecutive correct guess streak (3 correct predictions in a row) 2/5/9 times.
+Turning the Curse: Win a round during which you hold an OVERKILL card gained from a wrong prediction 3/7/14 times.
+Absolute Sight: Correctly predict the opponent's exact total value 7/15/30 total times.
+
+
+
+Charm of Archive
+A gift from the Rite of Archive. What you see may not be what truly exists.
+
+Traits
+Documented Reserve: What you see may not be what truly exists; every third card you draw is diverted from your hand and stored in a separate, archival hand.
+Record Retrieval: At any point during your turn, you may swap a card in your current hand with the stored card, returning the replaced card back to the deck.
+Persistent Record: The archive remains untouched by time; stored cards are not returned to the deck when a round ends.
+Backlog Penalty: Letting your data overflow disrupts your current tools; at the end of every round, if a card remains sitting in your separate archival hand, you lose a random trump card from your main hand.
+
+Masteries
+Card Catalog: Successfully swap a stored card to hit the exact target value 5/12/22 times.
+Strict Librarian: Win 5/10/20 rounds without ever triggering the end-of-round penalty (keeping your separate hand completely empty at the end of rounds).
+Deep Storage: Keep a single card stored in your separate hand across 3/4/5 consecutive rounds before finally using it to win.
+
+
+
+Charm of Fortuity
+A gift from the Rite of Fortuity. Being lucky is a talent. To thrive where others perish is truly no ordinary luck.
+
+Traits
+Lucky Guy: Blessed with no ordinary luck, on even rounds, you grant yourself the ability to wish for a specific card to draw. There is either a 50% or 100% chance of obtaining that card on your next draw. If you do not draw your wished card, your next draw is guaranteed to do so.
+Hollow Prayer: Sometimes things are too great to be true; wishing for a card that is already on the table will instead 100% draw an OVERKILL card.
+Unrelated Luck: In the bliss of needing pure luck to survive, you are barred from the natural order; you cannot gain lives from winning rounds.
+
+Masteries
+Manifest Destiny: Draw your wished card on the 50% chance check 5/12/25 times.
+Desperate Prayer: Force a guaranteed wish draw on your next turn after missing the initial percentage check 4/9/16 times.
+Living on the Edge: Win 2/5/10 matches entirely through high card values, despite the restriction of gaining no lives from round victories.
+
+
+
+Charm of Gluttony
+A gift from the Rite of Gluttony. An insatiable hunger drives you to consume everything in sight, growing bloated on power while starving your future self.
+
+Traits
+Feast Phase: Your greed cannot be contained. During the first turn of a round, you draw three cards instead of two, and these draws can never Bust you.
+Bloated Lethargy: The aftermath of consumption leaves you slow and vulnerable. Starting on turn three of a round, you are completely blocked from playing any trump cards, and every round after that consumes 1 life.
+Starvation Tax: Being bloated on absolute power, playing a trump card will consume one of your standard cards randomly on the table.
+
+Masteries
+Gorged Hand: Win a round while holding the maximum capacity of 6 trump cards 3/8/15 times.
+Heavy Slumber: Win 5/12/20 rounds during the Bloated Lethargy phase without being able to use trump cards.
+Clean Plate: Finish a match without ever triggering the Starvation Tax penalty a single time.
+
+
+
+Charm of Apathy
+A gift from the Rite of Apathy. When you truly cease to care about the outcome, the highs cannot thrill you, but the lows can no longer hurt you.
+
+Traits
+Numb Acceptance: Winning or losing means nothing to a hollow heart. You do not lose lives when losing a round, nor do you gain lives when winning. Instead, you will perish if you ever lose 5 rounds in a match.
+Cold Shoulder: Your complete indifference dampens the excitement of the table; all trump cards placed on the table at the end of a round has a 30% to fail and destroy itself.
+Passive Drift: Because you refuse to exert effort, you are entirely forbidden from manually choosing to Stand. You will automatically Stand only when your hand value hits 18 or higher. (On rounds where the bet is not 21, you automatically Stand when your total value is greater than or equal to Bet - 3)
+
+Masteries
+Flatline: Force a round to end in an absolute tie value 5/10/18 times.
+Unmoved: Win a match where the opponent attempted to change the bet 6 or more times 2/5/10 times.
+Autopilot: Win 4/9/15 rounds purely off the Passive Drift automatic stand trigger.
+
+
+
+Charm of Arrogance
+A gift from the Rite of Arrogance. Your supreme hubris demands that you do not merely defeat your opponent—you must humiliate them under the weight of your perfection.
+
+Traits
+Declared Victory: True masters do not hide their genius. At the start of a round, your initial two cards are dealt face-up, entirely visible to the opponent. However, if you win a round, you steal double the amount of lives.
+Condescending Gaze: You refuse to acknowledge an inferior hand. You are completely blocked from playing any trump cards unless your current hand value is already higher than the opponent's visible total.
+Narcissistic Gaze: True arrogance requires a show of power; you passively gain 1 random trump card at the start of your every turn as long as you have more placed trump card on the table than your opponent.
+
+Masteries
+Flawless Flex: Win 4/8/15 rounds under the effect of Declared Victory without ever drawing a third card.
+From Above: Play a game-winning trump card while fulfilling the strict conditions of Condescending Gaze 3/7/12 times.
+Unbroken Pride: Win 2/5/10 complete matches without ever triggering a Narcissistic Collapse.
+
+
+
+Charm of Amnesia
+A gift from the Rite of Amnesia. The past is a clean slate, entirely wiped clean every few moments. You operate purely in a fleeting present, unburdened by history but terrifyingly untethered.
+
+Traits
+Blank Slate: Memory is a fickle ghost. At the start of every odd-numbered round, your mind completely resets, wiping your entire trump card hand clean and replacing it with 3 entirely random new ones.
+Fog of War: Your forgetfulness is highly contagious. Every time you draw a card from the deck, the opponent completely forgets the exact numerical value of the last card they drew, returning it back to the deck.
+Identity Fugue: Forgetting who you are makes you highly unstable. At the start of your every turn you lose a fragment of your memory, causing a random card in the table to flip upside down, hiding its value from you.
+
+Masteries
+Improvised Genius: Win a round using only the random tools generated by Blank Slate 5/12/22 times.
+Dementia Cloud: Force the opponent to miscalculate a bust because their card values were hidden by Fog of War 3/7/14 times.
+Blind Flight: Successfully win a round during an active Identity Fugue phase 2/5/10 times.
+
+
+
+Charm of Regret
+A gift from the Rite of Regret. You are utterly paralyzed by your past mistakes, endlessly weeping over what could have been and dragging the entire table down into your sorrow.
+
+Traits
+Haunting Reminders: Your past failures refuse to leave you. At the start of a round, the lowest value card you drew in the previous round is pulled directly back from the graveyard and forced into your second card of the starting hand.
+Bitter Remorse: You look back with agonizing grief. If you choose to Stand, you may immediately sacrifice 1 life to completely discard the last card you drew. The life cost increases by 1 every time you use this ability.
+Crushing Weight: The accumulated sorrow slows your momentum to a crawl. You are entirely blocked from playing more than 3 trump cards per round, as the ghosts of your previous choices clutter your hands.
+
+Masteries
+Ghostly Echo: Win a round where the card pulled by Haunting Reminders turns out to be the exact card that saves you from busting 3/7/15 times.
+Rewriting History: Successfully use Bitter Remorse to dodge an impending bust and turn the round into a victory 4/9/16 times.
+Sorrowful Triumph: Win a match while completely遵守 the strict 1-card limit of Crushing Weight 2/5/10 times.

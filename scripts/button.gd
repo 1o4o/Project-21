@@ -1,6 +1,6 @@
 extends Button
 
-@export var normal_color = Color("e0e0e0ff") # Dark Grey
+@export var normal_color = Color("abababff") # Dark Grey
 @export var hover_color = Color("ffffffff")  # Slightly lighter
 @export var click_scale = Vector2(0.95, 0.95)
 

@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://byago3rquhn4o"]
+
+[ext_resource type="Script" uid="uid://bxbishfatqwd5" path="res://scripts/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://dwvvb4he6wgj5" path="res://assets/mainmenu.png" id="1_l6cm7"]
+[ext_resource type="FontFile" uid="uid://6gyf420bkkab" path="res://assets/fonts/FingerPaint-Regular.ttf" id="2_ekxnf"]
+
+[node name="main_menu" type="Control" unique_id=1962459674]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bqqt6")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=99027621]
+self_modulate = Color(0.17210159, 0.17210159, 0.17210159, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_l6cm7")
+
+[node name="titleScreen" type="CanvasLayer" parent="." unique_id=1342442229]
+visible = false
+
+[node name="Button" type="Button" parent="titleScreen" unique_id=1806674666]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 69.0
+offset_top = -73.0
+offset_right = 264.0
+offset_bottom = -6.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 43
+text = "PLAY"
+
+[node name="Label" type="Label" parent="titleScreen" unique_id=1670468003]
+offset_left = 49.0
+offset_top = 39.0
+offset_right = 277.0
+offset_bottom = 204.0
+theme_override_fonts/font = ExtResource("2_ekxnf")
+theme_override_font_sizes/font_size = 54
+text = "TWENTY
+ONE"
+horizontal_alignment = 1
+
+[node name="username" type="LineEdit" parent="titleScreen" unique_id=270560411]
+offset_left = 20.0
+offset_top = 335.0
+offset_right = 320.0
+offset_bottom = 385.0
+theme_override_font_sizes/font_size = 30
+placeholder_text = "Username"
+alignment = 1
+
+[node name="lobby" type="CanvasLayer" parent="." unique_id=1876543225]
+
+[node name="ColorRect" type="ColorRect" parent="lobby" unique_id=212084947]
+self_modulate = Color(0.27143836, 0.2714384, 0.27143836, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -455.0
+offset_top = -305.0
+offset_right = 455.0
+offset_bottom = 305.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ColorRect2" type="ColorRect" parent="lobby/ColorRect" unique_id=1784754331]
+self_modulate = Color(0.03529412, 0.03529412, 0.03529412, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -300.0
+offset_right = 450.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="roomLabel" type="Label" parent="lobby" unique_id=797118360]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -151.0
+offset_top = 28.0
+offset_right = 151.0
+offset_bottom = 98.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_ekxnf")
+theme_override_font_sizes/font_size = 47
+text = "ROOM LISTS"
+
+[node name="Button" type="Button" parent="lobby" unique_id=859381926]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -311.0
+offset_top = -80.0
+offset_right = -134.0
+offset_bottom = -35.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 27
+text = "Create Room"
+
+[connection signal="pressed" from="titleScreen/Button" to="." method="_on_connect_pressed"]
